@@ -1,8 +1,61 @@
+/* --- Example --- */
+
+.person {
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.highlight {
+    background-color: blue !important;
+}
+
+.person-name {
+    font-weight: bold;
+}
+
+.person-img {
+    display: block;
+    max-width: 128px;
+    max-height: 128px;
+    margin: 10px auto;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+
+/* ---- Practice ---- */
+
 .card {
-    display: -webkit-box;
+    display: inline-block;
     border: 1px solid darkgrey;
     background-color: grey;
     color: white;
     height: 200px;
     width: 150px;
+}
+
+.cardInput{
+    margin: 5px;
+}
+
+.list{
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.listTitle {
+    text-align: center;
+}
+
+.board{
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
 }
