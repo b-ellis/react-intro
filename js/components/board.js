@@ -19,7 +19,7 @@ class Board extends React.Component {
 		return(
 			<div className = "board">
 				<h1> {this.props.title} </h1>
-				<List listTitle="List 1" onAddSubmit={this.onAddSubmit.bind(this)} onAddInputChange={(e) => this.onAddInputChange(e)}/>
+				<List listTitle="List 1" onAddSubmit={this.onAddSubmit.bind(this)} onAddInputChange={this.onAddInputChange.bind(this)}/>
 			</div>
 		);
 	}
