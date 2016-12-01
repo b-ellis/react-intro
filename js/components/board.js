@@ -2,7 +2,7 @@ require('babel-polyfill');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import listContainer from './ListContainer';
+import ListContainer from './ListContainer';
 
 class Board extends React.Component {
 	constructor(){
@@ -20,7 +20,7 @@ class Board extends React.Component {
 		return(
 			<div className = "board">
 				<h1> {this.props.title} </h1>
-				<listContainer />
+				<ListContainer />
 			</div>
 		);
 	}

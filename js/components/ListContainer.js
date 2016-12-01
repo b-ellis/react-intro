@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import List from './list';
 
-class listContainer extends React.Component {
+class ListContainer extends React.Component {
 	constructor(){
 		super();
 		this.text = ''
@@ -22,9 +22,9 @@ class listContainer extends React.Component {
 
 	render(){
 		return(
-			<List card={this.cards} onAddInputChanged={this.onAddInputChanged.bind(this)} />
+			<List listTitle="List 1" card={this.cards} onAddInputChanged={this.onAddInputChanged.bind(this)} />
 		)
 	}
 } 
 
-module.exports = listContainer;
+module.exports = ListContainer;
