@@ -1,3 +1,4 @@
+require('babel-polyfill');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -19,7 +20,7 @@ class List extends React.Component {
 			<div className = "list">
 				<h2> {this.props.listTitle} </h2>
 				<form className="cardInput" onSubmit={(e) => this.submitted(e)}>
-					<input type="text" ref={(input) => {this.cardInput = input}} onChange={this.props.onAddInputChange} ></input>
+					<input type="text" ref={(input) => {this.props.onAddInputChange(input)}}></input>
 					<input type="submit"></input>
 				</form>
 				<Card text="Card 1"/>
