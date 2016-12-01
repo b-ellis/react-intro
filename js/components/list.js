@@ -20,7 +20,7 @@ class List extends React.Component {
 			<div className = "list">
 				<h2> {this.props.listTitle} </h2>
 				<form className="cardInput" onSubmit={(e) => this.submitted(e)}>
-					<input type="text" ref={(input) => {this.props.onAddInputChange(input)}}></input>
+					<input type="text" ref={(input) => {this.props.onAddInputChanged(input)}}></input>
 					<input type="submit"></input>
 				</form>
 				<Card text="Card 1"/>
