@@ -10,22 +10,24 @@ class List extends React.Component {
 	// 	super();
 	// 	this.submitted = this.submitted.bind(this);
 	// }
-	submitted(event) {
-		event.preventDefault();
-		console.log(this.cardInput.value);
-	}
+	// submitted(event) {
+	// 	event.preventDefault();
+	// 	console.log(this.text.value);
+	// }
 
 	render() {
+		let cardList = [];
+		for(var i = 0; i < this.props.cards.length; i++) {
+			cardList.push(<Card text={this.props.cards[i]} key={i} />);
+		}
 		return(
 			<div className = "list">
 				<h2> {this.props.listTitle} </h2>
-				<form className="cardInput" onSubmit={(e) => this.submitted(e)}>
-					<input type="text" ref={(input) => {this.props.onAddInputChanged(input)}}></input>
+				<form className="cardInput" onSubmit={(e) => this.props.onAddSubmit(e)}>
+					<input type="text" onChange={this.props.onAddInputChanged}></input>
 					<input type="submit"></input>
 				</form>
-				<Card text="Card 1"/>
-				<Card text="Card 2"/>
-				<Card text="Card 3"/>
+				{cardList}
 			</div>
 		)
 	}
